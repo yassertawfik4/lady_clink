@@ -1,0 +1,315 @@
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --main-color:#62d2a2;
+    --white-color:#ffffff;
+}
+body{
+    font-family: 'Cairo', sans-serif;
+    overflow-x: hidden;
+    /* height: 1000vh !important; */
+}
+/* start header */
+.navbar{
+    background-color: var(--white-color);
+}
+.navbar .nav-item .nav-link{
+    font-weight: 500;
+    color: #000033;
+    transition: 0.3s;
+}
+.navbar .nav-item .nav-link:hover{
+    color: var(--main-color);
+    
+}
+.navbar .nav-item .nav-link::selection{
+    background-color: #828282;
+    color: white;
+}
+.navbar .navbar-toggler{
+    color: white;
+    border: none;
+}
+.logo{
+width: 11%;
+}
+@media(max-width: 991px) {
+    .navbar .navbar-nav .nav-item .nav-link:hover{
+        margin-left: 10px;
+    }
+    .navbar .main-list{
+        margin-top: 20px;
+    }
+    .logo{
+        width: 17%;
+        }
+        .navbar .navbar-nav .nav-item:not(:last-child){
+            border-bottom:1px solid #F5F5F5;
+        }
+}
+@media(max-width: 767px) {
+    .logo{
+        width: 26%;
+        }
+}
+@media(max-width: 576px) {
+    .navbar .navbar-nav .nav-item{
+    margin-left: 20px;
+    }
+    .logo{
+        margin-left: 20px;
+        }
+}
+/* End header */
+/* start Landing */
+.landing{
+    height: calc(100vh - 72px);
+    position: relative;
+    width: 100%;
+    transition: 0.3s;
+}
+.landing .landinfo .title{
+    color: white;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+.hero_bg_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    z-index: -1;
+}
+.hero_bg_box img {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    object-position: bottom right;
+}
+.landing .landinfo .title::selection{
+    background-color: white;
+    color: var(--main-color);
+}
+.landing .landinfo .para{
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    color: var(--white-color);
+}
+.landing .landinfo .para::selection{
+    background-color: white;
+    color: var(--main-color);
+}
+
+.btn{
+    border: none;
+    font-weight: bold;
+    color: #62d2a2;
+    border: 1px solid var(--white-color);
+    background-color: var(--white-color);
+}
+.btn:hover{
+    color: var(--white-color);
+    background-color: transparent;
+}
+@media(max-width: 576px) {
+    .landing .landinfo .btn{
+        padding-top: 1rem!important;
+        padding-bottom: 1rem!important;
+        padding-right: 2rem!important;
+        padding-left: 2rem!important;
+        margin-right: 0 !important;
+    }
+}
+@media(max-width: 317px) {
+    .landing .landinfo .btn{
+        padding-top: .5rem!important;
+        padding-bottom: .5rem!important;
+        padding-right: 1rem!important;
+        padding-left: 1rem!important;
+        margin-right: 0 !important;
+    }
+}
+.typed-cursor{
+    opacity: 0 !important;
+}
+.currentTitle{
+    color: var(--main-color) !important;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background-color: #f6f6f6;
+    box-shadow: 0 0 10px #ddd inset;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+.go-down{
+    color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+    font-size: 30px;
+}
+.go-down:hover{
+    color: #AEDEFC;
+}
+.go-down .icon{
+    animation: bouncing 1.5s infinite;
+}
+@keyframes bouncing{
+    0%, 10%, 20%, 50%, 80%, 100%{
+        transform: translateY(0);
+    }
+    40%, 60%{
+        transform: translateY(-15px);
+    }
+}
+@media (max-width: 767px){
+.hero_bg_box img {
+    object-position: center top !important;
+}
+}
+/* End Landing */
+/* Start About */
+.about{
+    background-color: var(--white-color);
+}
+.row .img-box img{
+    width: 100%;
+    border-radius: 15px;
+}
+.detail-box .btn{
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: 1px solid var(--main-color);
+}
+.detail-box .btn:hover{
+    background-color: var(--white-color);
+    color: var(--main-color);
+}
+.detail-box h2{
+font-weight: 600;
+}
+.detail-box span{
+    color: var(--main-color);
+}
+.detail-box p{
+    font-weight: 500;
+}
+.main-title{
+    position: relative;
+    color: #000033;
+}
+.main-title::before{
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 4px;
+    bottom: 0px;
+    background: var(--main-color);
+    transform: translate(5px,6px);
+}
+@media (max-width:991px) {
+    .main-title::before{
+    transform: translate(15px,6px);
+    }
+    
+}
+@media (max-width:767px) {
+    .main-title::before{
+    width: 90px !important;
+    transform: translate(41px,6px)  !important;
+    }
+    
+}
+.about .detail-box ::selection{
+    background-color: #828282;
+    color: var(--main-color);
+}
+@media(max-width:767px){
+    .detail-box{
+        margin-bottom: 30px;
+    }
+}
+/* End About */
+/* start services */
+.serv-title .main-title::before{
+    width: 156px;
+    transform: translate(25px,6px);
+}
+.serv-title ::selection{
+    background-color: #828282;
+    color: var(--main-color);
+}
+.serv-title .para{
+    font-size: 25px;
+}
+.services .row .image img{
+    width: 100%;
+    background-color: #f6f6f6;
+    margin-bottom: 20px;
+    padding:10px ;
+    transition: 0.3s;
+}
+.services .row .image img:hover{
+    padding: 0;
+}
+.serv-btn .btn{
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border: 1px solid var(--main-color);
+}
+.serv-btn .btn:hover{
+    background-color: var(--white-color);
+    color: var(--main-color);
+}
+/* end services */
+.footer{
+    background-color: #178066;
+}
+.footer .scoial{
+    flex-direction: column;
+    font-size: 15px;
+}
+.footer .scoial a{
+    text-decoration: none;
+    color: var(--white-color);
+    transition: 0.4s;
+    margin-bottom: 20px !important;
+}
+.footer .scoial a span{
+    margin-right: 10px !important;
+}
+.footer .main img{
+    width: 50%;
+}
+.footer ::selection{
+    background-color: #828282;
+    color: var(--main-color);
+}
+.footer .footer-links h1{
+    font-size: 20px !important;
+}
+.footer .footer-info h1{
+    font-size: 20px !important;
+    
+}
+.footer .location h6{
+    line-height: 1.8;
+    font-size: 15px!important;
+}
+.footer .final .athor{
+    color: var(--white-color);
+}
